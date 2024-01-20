@@ -1,6 +1,6 @@
 import 'package:docdoc_app/Features/Login/UI/login/Widgets/already%20_have_account.dart';
 import 'package:docdoc_app/Features/Login/UI/login/Widgets/custom_elvated_button.dart';
-import 'package:docdoc_app/Features/Login/UI/login/Widgets/custom_text.dart';
+import 'package:docdoc_app/core/widget/blue_title_with_description.dart';
 import 'package:docdoc_app/Features/Login/UI/login/Widgets/custom_textform.dart';
 import 'package:docdoc_app/Features/Login/UI/login/Widgets/rich_text.dart';
 import 'package:docdoc_app/core/Theming/colors.dart';
@@ -13,34 +13,40 @@ class LoginBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  SafeArea(
+    return SafeArea(
       child: SingleChildScrollView(
         child: Padding(
-          padding:  EdgeInsets.symmetric(vertical: 100.h,horizontal: 30.w),
-          child: Column(
-
+          padding: EdgeInsets.symmetric(vertical: 100.h, horizontal: 30.w),
+          child: const Column(
             children: [
-             const customText(),
-              const SizedBox(
+              BlueTitleWithDescription(
+                title: 'Welcome Back',
+                description: 'We\'re excited to have you back, can\'t wait to see what you\'ve been up to since you last logged in.',
+              ),
+              SizedBox(
                 height: 40,
               ),
-              customTextForm(hinttext: 'email',),
-              const SizedBox(
+              CustomTextForm(
+                hinttext: 'email',
+              ),
+              SizedBox(
                 height: 15,
               ),
-              customTextForm(hinttext: 'password',),
-              const SizedBox(
+              CustomTextForm(
+                hinttext: 'password',
+              ),
+              SizedBox(
                 height: 15,
               ),
-              const customElvatedButton(),
-              const SizedBox(
+              customElvatedButton(),
+              SizedBox(
                 height: 20,
               ),
-              const richText(),
-              const SizedBox(
+              richText(),
+              SizedBox(
                 height: 15,
               ),
-              const alreadyHaveAccount()
+              alreadyHaveAccount()
             ],
           ),
         ),

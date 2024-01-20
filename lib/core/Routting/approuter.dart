@@ -10,6 +10,8 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => const OnBoarding());
       case Routes.loginscreen:
         return MaterialPageRoute(builder: (_) => const Login());
+      case Routes.fillProfileScreen:
+        return MaterialPageRoute(builder: (_) => const FillProfile());
 
       default:
         return MaterialPageRoute(
