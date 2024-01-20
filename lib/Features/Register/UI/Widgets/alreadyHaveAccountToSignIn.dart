@@ -5,8 +5,8 @@ import 'package:docdoc_app/core/Theming/textstyle.dart';
 import 'package:flutter/material.dart';
 
 // ignore: camel_case_types
-class alreadyHaveAccount extends StatelessWidget {
-  const alreadyHaveAccount({super.key});
+class AlreadyHaveAccountToSignIn extends StatelessWidget {
+  const AlreadyHaveAccountToSignIn({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,9 +18,9 @@ class alreadyHaveAccount extends StatelessWidget {
           style: AppTextStyle.fontsizebold12semi.copyWith(color: Colors.black),
         ),
         TextButton(onPressed: (){
-          context.pushNamed(Routes.registerScreen);
-        }, child: Text('Sign Up ',style: AppTextStyle.fontsizebold12semi.copyWith(
-          color: ColorManager.mainblue
+          context.pushNamed(Routes.loginscreen);
+        }, child: Text('Sign In ',style: AppTextStyle.fontsizebold12semi.copyWith(
+            color: ColorManager.mainblue
         ),))
       ],
     );

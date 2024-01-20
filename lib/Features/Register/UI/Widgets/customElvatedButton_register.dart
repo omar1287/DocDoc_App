@@ -1,15 +1,10 @@
-import 'package:docdoc_app/core/Helpers/extension.dart';
-import 'package:docdoc_app/core/Routting/Routs.dart';
 import 'package:docdoc_app/core/Theming/colors.dart';
 import 'package:docdoc_app/core/Theming/textstyle.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-// ignore: camel_case_types
-class CustomElvatedButton extends StatelessWidget {
-   CustomElvatedButton({super.key, required this.value});
-
-  String value;
+class CustomElvatedButtonRegister extends StatelessWidget {
+  const CustomElvatedButtonRegister({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,12 +16,13 @@ class CustomElvatedButton extends StatelessWidget {
         style: ElevatedButton.styleFrom(
             backgroundColor: ColorManager.mainblue,
             shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(20))),
-        child: Text(
-          value,
-          style: AppTextStyle.fontsizebold20.copyWith(color: Colors.white),
+                borderRadius: BorderRadius.circular(20)
+            )
         ),
-      ),
+        child: Text(
+          'Create Account',
+          style: AppTextStyle.fontsizebold20.copyWith(color: Colors.white),
+        ),),
     );
   }
 }

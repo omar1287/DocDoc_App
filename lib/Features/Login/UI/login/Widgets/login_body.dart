@@ -1,10 +1,10 @@
 import 'package:docdoc_app/Features/Login/UI/login/Widgets/already%20_have_account.dart';
 import 'package:docdoc_app/Features/Login/UI/login/Widgets/custom_elvated_button.dart';
+import 'package:docdoc_app/Features/Login/UI/login/Widgets/forget_password.dart';
 import 'package:docdoc_app/core/widget/blue_title_with_description.dart';
 import 'package:docdoc_app/Features/Login/UI/login/Widgets/custom_textform.dart';
 import 'package:docdoc_app/Features/Login/UI/login/Widgets/rich_text.dart';
-import 'package:docdoc_app/core/Theming/colors.dart';
-import 'package:docdoc_app/core/Theming/textstyle.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -17,7 +17,8 @@ class LoginBody extends StatelessWidget {
       child: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.symmetric(vertical: 100.h, horizontal: 30.w),
-          child: const Column(
+          child:  Column(
+            crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               BlueTitleWithDescription(
                 title: 'Welcome Back',
@@ -35,10 +36,9 @@ class LoginBody extends StatelessWidget {
               CustomTextForm(
                 hinttext: 'password',
               ),
-              SizedBox(
-                height: 15,
-              ),
-              customElvatedButton(),
+              ForgetPassword(),
+
+              CustomElvatedButton(value: "Login",),
               SizedBox(
                 height: 20,
               ),
