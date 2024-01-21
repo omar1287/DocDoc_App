@@ -7,8 +7,8 @@ class FillProfileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: FillProfileScreenBody(),
+    return const Scaffold(
+      body:  FillProfileScreenBody(),
     );
   }
 }

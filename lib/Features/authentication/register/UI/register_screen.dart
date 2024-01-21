@@ -1,5 +1,6 @@
-import 'package:docdoc_app/Features/Register/UI/Widgets/register_screen_body.dart';
 import 'package:flutter/material.dart';
+
+import 'Widgets/register_screen_body.dart';
 
 class Register extends StatelessWidget {
   const Register({super.key});
