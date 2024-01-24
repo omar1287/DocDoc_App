@@ -1,6 +1,6 @@
-import 'package:docdoc_app/Features/Login/UI/login/Widgets/custom_elvated_button.dart';
 import 'package:docdoc_app/Features/Login/UI/login/Widgets/custom_textform.dart';
 import 'package:docdoc_app/core/widget/blue_title_with_description.dart';
+import 'package:docdoc_app/core/widget/customElvatedButton.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -30,7 +30,7 @@ class ForgetPasswordBody extends StatelessWidget {
                 SizedBox(
                   height: 400.h,
                 ),
-                CustomElvatedButton(value: "Reset Password")
+                CustomElvatedButton(text: "Reset Password", onPressed: () {})
               ],
             ),
           ),

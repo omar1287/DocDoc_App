@@ -1,10 +1,15 @@
+import 'package:docdoc_app/core/Routting/Routs.dart';
 import 'package:docdoc_app/core/Theming/colors.dart';
 import 'package:docdoc_app/core/Theming/textstyle.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class CustomElvatedButtonRegister extends StatelessWidget {
-  const CustomElvatedButtonRegister({super.key});
+class CustomElvatedButton extends StatelessWidget {
+  const CustomElvatedButton(
+      {super.key, required this.text, required this.onPressed});
+
+  final String text;
+  final VoidCallback onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -12,17 +17,16 @@ class CustomElvatedButtonRegister extends StatelessWidget {
       width: double.infinity,
       height: 55.h,
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: onPressed,
         style: ElevatedButton.styleFrom(
             backgroundColor: ColorManager.mainblue,
             shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(20)
-            )
-        ),
+                borderRadius: BorderRadius.circular(20))),
         child: Text(
-          'Create Account',
+          text,
           style: AppTextStyle.fontsizebold20.copyWith(color: Colors.white),
-        ),),
+        ),
+      ),
     );
   }
 }
